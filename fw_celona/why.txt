@@ -1,0 +1,92 @@
+### Framework
+#  frlib- devloper
+#  client- user
+# #####
+
+# paramiko is pure python implementation ssh  (Openssh)
+# pyshark (T-shark in the backend)
+# grpcio, boto3
+# pexpect is a wrapper on (openssh)
+
+# Complex thing (Test Case), Why abstraction
+
+# why Framework?
+# 1-  Hide complexity, expose simplicity
+    # ssh to a node
+        # ip, user password or Key
+        # specific algo
+        # jump host
+        # keepalive  login 30s keepalive 60minutes extra config
+    # cn_login_to_node end user
+
+# 2- Extensible framework (Abstracting) can be used as a base client will extend it
+    # read_pod_log  ---> (edge, cso, managed_cluster)
+    # Server (Abstraction)  Cluster (Edge cluster, HA cluster, NG cluster)
+
+# 3- Security ( keys, certificates, how to use ) control framework
+    # data/certs/keys not telling client to implement by themselves
+    # request ( on a server )
+
+# 4- Backward compatibility ( manage )
+    # moved to managed kubernetes cluster ( old kubernetes cluster, managed kubernetes cluster)
+
+
+# what to focus while desgining
+
+# 1- Scope, problem statement
+    # what we are going to solve
+    # Scope ( What not to do)  We will not upgrade AP by command line
+    # not supporting i-phones
+    # end-to-end release qa with all the reports,
+    # and that can be mailed and that can be debugged with logs, that can be stored to show in graphs
+    # config creation automation ( setup config not manual )
+    # no need of premature-optimization ( small networks)
+
+# 2- use as many abstraction as possible, create modular structure ( cohesive) AP related things ap.py
+# 3- hide implementation details ( ssh_utility ) (read_pod_log)
+# 4- Better logging ( by convention we were following ) robot.api logger/ setup config creation
+# 5- Meaningful exceptions
+# 6- clean concise code
+
+## efficient framework
+
+
+
+
+
+
+## List backing ds  ArrayList  Array
+## dictionary ka backing ds  HashTables  contagious Array index [], O(1)
+
+
+
+
+Why selected robot?
+# very hig level language, simple for end-user ( not very proficient in programming)
+# Keyword-Driven
+# A good default reporting feature
+# very good for testing requiremnts ( tag, test setup tear down)
+# wait,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
