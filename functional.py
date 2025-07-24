@@ -95,11 +95,13 @@ for i in range(3):
 print("*"*5+"Call class like function -> __call__ "+"*"*5)
     
 
-class AttackFinder():
+class AttackFinder:
     """find attack"""
     def __init__(self,attack):
         self.attack=attack
-        
+
+    # Example: Using __call__ to make a class instance callable like a function.
+    # - When you write `person()`, Python internally executes `person.__call__()`.
     def __call__(self):
         attacks = {"kimura":"upper body",
                "straight_ankle_lock":"lower body",

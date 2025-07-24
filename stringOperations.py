@@ -22,8 +22,8 @@ print("no of s:",x-y)
 #find
 str1 ='sh'
 str2 ='ko'
-print(name.find(str1)) #give the first occurance
-print(name.find(str2))
+print("give first occurance of sh: {}".format(name.find(str1))) #give the first occurance
+print(f"give first occurance of ko: {name.find(str2)}")
 
 #split : will split data and store in from of list
 
@@ -58,7 +58,7 @@ filenames = os.listdir('.')
 pyfiles = [name for name in filenames if name.endswith(".py")]
 
 print(any(name.endswith('.py') for name in filenames))
-
+# - any(...) returns True if at least one item in the generator is True
 
 
 
