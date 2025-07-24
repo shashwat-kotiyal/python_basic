@@ -9,9 +9,6 @@ Created on Tue Apr  6 23:06:34 2021
 def avg(first, *rest):
     return ((first + sum(rest))/ (1+len(rest)))
 
-print(avg(1,2))
-
-
 def anyargs(*args, **kwargs):
     print(args)      # A tuple, positional
     print(kwargs)    # A dict, keyword argument 
@@ -22,8 +19,7 @@ def recv(maxsize,*,block):
     print("recived arguments")
     pass
 
-#recv(1024,True)   #err
-recv(1024,block=True)
+
 
 def minimum(*values,clip=None):
     m = min(values)
@@ -32,8 +28,7 @@ def minimum(*values,clip=None):
         m = clip if m< clip else m
     return m
 
-print(minimum(1, 5, 2, -5, 10))          # Returns -5
-print(minimum(1, 5, 2, -5, 10, clip=0))  # Returns 0
+
 
 #que3: function annotation
 
@@ -48,25 +43,16 @@ print(add.__annotations__)
 def myfunc():
     return 1,2,3
 
-a,b,c = myfunc()
 
-print(a,b,c)
-
-d = 1 , 2
-print(d,"::",type(d))
 
 #Que4: Defining Functions with Default Arguments
 
 #Que5: INline function
+def eg_inline():
+    add = lambda x,y:x+y
+    print(add(3,4))
 
-add = lambda x,y:x+y
 
-print(add(3,4))
-
-#sort names by surnames
-names =["anindo das",'rahul singh','kavita mishra','patra']
-
-print(sorted(names,key=lambda x:x.split()[-1].lower()))
 
 #que 9: closer, function are obj,A Closure is a function object that remembers values in enclosing scopes even if they are not present in memory.
 #   execute inner function outside its scope
@@ -86,11 +72,7 @@ def outer():
     
     return inner
 
-f = outer()
-print(f())
-f.set_n(10)
-print(f())
-f.get_n()
+
 
 #A slight extension to this recipe can be made to have closures emulate instances of a class.
 import sys
@@ -116,13 +98,55 @@ def Stack():
         return len(items)
     return ClosureInstance()
 
-s = Stack()
-print(s)
-s.push(10)
-s.push(20)
-s.push('Hello')
-print(len(s))
-s.pop()
-s.pop()
-s.pop()
+
     
+if __name__ =='__main__':
+    print("#Que1: function that accepts any number of input arguments.")
+    print(avg(1, 2))
+
+    print("#Que2: Writing Functions That Only Accept Keyword Arguments")
+    # recv(1024,True)   #err
+    recv(1024, block=True)
+
+
+    #using clip give lower bound minimum 0
+    print("#Clip function")
+    min1 = minimum(1, 5, 2, -5, 10)          # Returns -5
+    min2= minimum(1, 5, 2, -5, 10, clip=0)  # Returns 0
+    min3= minimum(10, 20, 5, clip=8)   # Returns 8 (clipped from 5)
+    min4= minimum(10, 20, 15, clip=8)
+    # Returns 10 (no need to clip)
+# min(values) returns -1  Since -5 < 0, we clip it to 0
+
+    print("#que3: Returning Multiple Values from a Function untuple")
+    a,b,c = myfunc()
+    print(a,b,c)
+
+    d = 1 , 2
+    print(d,"::",type(d))
+
+    print("#Que5: INline function")
+    eg_inline()
+
+    #sort names by surnames
+    names =["anindo das",'rahul singh','kavita mishra','patra']
+
+    print(sorted(names,key=lambda x:x.split()[-1].lower()))
+
+
+    f = outer()
+    print(f())
+    f.set_n(10)
+    print(f())
+    f.get_n()
+
+
+    s = Stack()
+    print(s)
+    s.push(10)
+    s.push(20)
+    s.push('Hello')
+    print(len(s))
+    s.pop()
+    s.pop()
+    s.pop()

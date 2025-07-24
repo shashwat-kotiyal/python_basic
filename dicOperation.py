@@ -15,15 +15,15 @@ dic2 = {'x':2,'y':5,'w':8}
 
 #comman keys
 
-print(dic1.keys()& dic2.keys())
+print(f"common eys in dic1 and dic2 : {dic1.keys() & dic2.keys()}")
 
 #comman key value pairs
 
-print(dic1.items()& dic2.items())
+print(f"common items in dic1 and dic2 : {dic1.items()& dic2.items()}")
 
 #keys in a that are not in b
 
-print(dic1.keys() - dic2.keys())
+print(f" key not in  : {dic1.keys() - dic2.keys()}")
 
 """
 Make a new dictionary with certain keys removed
