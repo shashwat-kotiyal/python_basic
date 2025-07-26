@@ -40,6 +40,46 @@ def fibgen(num):
 
 
 if __name__ =='__main__':
+
+    x=10
+    y=10
+    z=10
+    print(id(x),id(y),id(z))
+
+    a=10000000000
+    b=10000000000
+    print(id(a),id(b))
+
+    print(-10//3)  # output is -4 instead of -3.3
+    print(2**3**2)  #some operator prefer rt to left ans is  2**9 = 512 not 64
+    print(8//4//2)  # precedence lt -> rt applied , associativity from rt to left
+
+    name= "shantanu"
+    print(name[2:8:-2]) #nohing will be in o/p as will not find end index in going opposite direction
+    print(name[2:8:-2])
+
+    a=[1,2,3]
+    b=[4,5,6]
+    c=[7,8,9]
+    print(a+b+c)
+    print(list(zip(a,b,c)))
+    l=[]
+    l.append(a)
+    l.append(b)
+    l.append(c)
+    print(l)
+    print(a.extend(b))
+
+
+
+    s= 'aabaaabbbbcc'
+    freq={}
+    for char in s:
+        if char not in freq:
+            freq[char]=1
+        else:
+            freq[char]+=1
+    print(freq)
 # 1 write in white paper
 # 2 basic control flow
         # if ,else, for while
@@ -84,8 +124,8 @@ if __name__ =='__main__':
 
 #7 how to use Genrators
     #genrator function eg: xrange,  my_dict.iteritems= give one item at a time
-    for items in fibgen(10):
-        print(items)
+    # for items in fibgen(10):
+    #     print(items)
 
 #8 knows basic of oops
 #   write sample file and program write them over and over again from scratch ,

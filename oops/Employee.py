@@ -7,14 +7,6 @@ class Employee:
         self.salary= salary
         Employee.emp_count +=1
 
-
-    # @property
-    # def name(self):
-    #     return self.name
-    #
-    # @property
-    # def salary(self):
-    #     return self.salary
     def apply_raise(self):
         self.salary= int(self.raise_amt * self.salary)
 

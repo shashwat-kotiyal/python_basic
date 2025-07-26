@@ -5,8 +5,10 @@ Created on Wed Oct  7 05:28:36 2020
 @author: SKOTIYAL
 
 Whenever a class is instantiated __new__ and __init__ methods are called. 
-__new__ method will be called when an object is created 
+__new__ method will be called when an object is created
+__new__	purpose Creates a new object  called 	Before the object is created
 and __init__ method will be called to initialize the object
+__init__ purpose	Initializes the object called 	After the object is created
 """
 
 

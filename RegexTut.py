@@ -11,7 +11,21 @@ import re
  findall, search, spilt, sub, finditer
 meta character:
    [] . ^ $ * + {} | ()
-=  set anychar(expect \) startsWith endWith zeroOrMore oneOrMore specifiedNoOcc eiterOr captureGroup 
+ . any character expect \n 
+ +
+
+\d matches digit (0 9)
+\D not a digit  (0 9)
+\w any word characchter (a-z,A-Z,0-9,_)
+\W not a wrd character
+\s whitespace(space tab newline \n,\t)
+\S not a whitespace
+
+
+aunker
+\b
+
+startsWith endWith zeroOrMore oneOrMore specifiedNoOcc eiterOr captureGroup 
 
 Special sequences:
 
@@ -47,3 +61,6 @@ if match:
     
 match1 = re.findall(r'\w+-gaurd',phrase)
 print(match1)
+
+
+
