@@ -2,6 +2,7 @@ from collections import namedtuple
 from dataclasses import dataclass
 # Nodes
     # AP, Edge, CSO-Server, CSO-App ( UI, backend rest calls), Moxn, Attenuator, OTA Machine, Amarisoft
+    # gui POM, all page one py file
 
 # functionality
     # running a remote command
@@ -55,7 +56,7 @@ from dataclasses import dataclass
 
 # Mysql db for execution result storage ( time, build number, pass, fail, reason, setup name)
 # groupby, charting, graphing
-# execution( jenkins server)-> call script on mysql server( gcp host)-> that script will populate on rwo for this execution in table ( mysql server)----
+# execution( jenkins server)-> call script on mysql server( gcp host)-> that script will populate on two for this execution in table ( mysql server)----
 # ---> grafana will consume this data (gcp host) ( queries for data)
 
 # they want to know the latest passed build
@@ -71,4 +72,20 @@ c = CSO()
     # when we are working with thousands APs ( loading the complete logs)
     # file iteration ( file.read())
     # long running ( while loop which iterate if data available on socket)
+
+
+
+
+
+
+# SOLID principle
+
+# single responsiblity:
+# class should have one and only one responsiblity
+
+#O: class should be open for extension close for modification.
+#L: liskov substuiton :
+#I : interface saggretion
+#D: Dependency inversion
+
 

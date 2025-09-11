@@ -24,11 +24,11 @@ class Employee:
         return cls(name,salary)
 
     @staticmethod
-    def is_valid_raise(raise_amt):
+    def is_valid_raise(raise_amt):       #provide utility function
         return  1<=raise_amt<=1.05
 
     @staticmethod
-    def is_weekday(day):
+    def is_weekday(day):                #provide utility function
         if day.weekday() ==5 or day.weekday() ==5:
             return False
         return True
@@ -125,6 +125,7 @@ print(issubclass(Manager,Employee))
 print("*"*5+"specialmethods dunder"+"*"*5)
 
 print(emp1)
+print(repr(emp1))
 print(emp1.__str__())  # For users/readability# For users/readability
 print(emp1.__repr__()) # For developers/debugging
 

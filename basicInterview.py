@@ -44,7 +44,8 @@ if __name__ =='__main__':
     x=10
     y=10
     z=10
-    print(id(x),id(y),id(z))
+    t=20
+    print(id(x),id(y),id(z),id(t))
 
     a=10000000000
     b=10000000000
@@ -66,9 +67,9 @@ if __name__ =='__main__':
     l=[]
     l.append(a)
     l.append(b)
-    l.append(c)
+    l.append(c)   #append add one item
     print(l)
-    print(a.extend(b))
+    print(a.extend(b)) #extend take itrable, each item of x
 
 
 
@@ -118,6 +119,16 @@ if __name__ =='__main__':
     #set
     my_ser={10,20,30,40,50}
 
+    empty_set = set()      #define empty set
+    print(type(empty_set))
+
+    my_set = {1, 2, 3}
+    my_set.add(4)   #one element at a time
+    print(my_set)
+
+    my_set.update([5, 6]) #multiple element at time
+    print(my_set)
+
 #6 use list, dict  comprehension ,
     my_list= [1,2,3,4,5]
     squares_list = [x*x for x in my_list]
@@ -138,4 +149,4 @@ if __name__ =='__main__':
 #    eg: what test modules they are using unit testing
 
 #10 Know basic of other technology
-#   eg: sql, bash scripting  , T shape skill set -> know basic of everything what they are lsited in job profile.
+    #   eg: sql, bash scripting  , T shape skill set -> know basic of everything what they are lsited in job profile.
