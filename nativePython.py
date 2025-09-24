@@ -1,8 +1,7 @@
+# itreating in list
 
-#itreating in list
 
-
-list =[1,2,3]
+list = [1, 2, 3]
 
 for v in list:
     print(v)
@@ -30,7 +29,7 @@ sum(iterable), min(iterable), max(iterable)
 combined= "".join(iterable)
             
 """
-#how i  get the index----> range(len(list)) ---better way to do it ---> we have enumarate
+# how i  get the index----> range(len(list)) ---better way to do it ---> we have enumarate
 
-for i,v in enumerate(list):             # give 2 values index and value , it give list of tuples
-    print(i,v)
+for i, v in enumerate(list):  # give 2 values index and value , it give list of tuples
+    print(i, v)

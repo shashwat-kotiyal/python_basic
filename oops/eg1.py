@@ -1,6 +1,7 @@
 class Employee:
-    salary_raised = .5  # class variable(static variable /attribute (funcyion or varibale)) attribute belong to class not instance to a class
+    salary_raised = 0.5  # class variable(static variable /attribute (funcyion or varibale)) attribute belong to class not instance to a class
     count = 0
+
     def __init__(self, Name, Id, Salary):
         self.Name = Name
         self._Id = Id
@@ -17,7 +18,7 @@ class Employee:
 
     @property
     def Salary(self):
-        return (f"{self._Salary}")
+        return f"{self._Salary}"
 
     @Salary.setter
     def Salary(self, value):
@@ -29,6 +30,7 @@ class Employee:
 
     def __repr__(self):
         return f"Employee({self.Name},{self.Salary},{self._Id})"
+
 
 emp1 = Employee("bijay", 1, 400000)
 print(emp1.email())

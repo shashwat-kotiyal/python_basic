@@ -2,6 +2,7 @@ from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import declarative_base
 
 import os
+
 print(os.getcwd())
 
 """
@@ -17,14 +18,16 @@ oracle_db_url= "pracle://<username>:<password>@<hostname>:<port>/<database>"
 
 """
 
-#sqllite
-db_url = "sqlite:///database.db"  #/// Relative path where we running,  //// absolute path
+# sqllite
+db_url = (
+    "sqlite:///database.db"  # /// Relative path where we running,  //// absolute path
+)
 
-#engine = create_engine("sqlite+pysqlite:///:memory:")
+# engine = create_engine("sqlite+pysqlite:///:memory:")
 engine = create_engine(db_url, echo=True)
 Base = declarative_base()
 
-#Base.metadata.create_all(engine)
+# Base.metadata.create_all(engine)
 
 
 class User(Base):
@@ -33,5 +36,5 @@ class User(Base):
     name = Column(String)
     age = Column(Integer)
 
-Base.metadata.create_all(engine) 
 
+Base.metadata.create_all(engine)

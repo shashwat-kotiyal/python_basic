@@ -18,17 +18,19 @@ import config
 # r =requests.post("https://httpbin.org/#/post", data=payload)
 # #print(r.json())
 
+
 def get1():
     from requests.exceptions import Timeout
+
     try:
         BASE_URL = "https://www.sharetechnote.com/"
-        response = requests.get(BASE_URL,timeout=2)
-        #if we want to complete api in 2 sec-> set timeout
+        response = requests.get(BASE_URL, timeout=2)
+        # if we want to complete api in 2 sec-> set timeout
 
         print("Final URL:", response.url)  # Shows the encoded URL
         print("Status Code:", response.status_code)
         print("Body:", response.text)
-    except Timeout as to:
+    except Timeout:
         print("timeout error")
 
         # url = "https://gorest.co.in/"
@@ -36,29 +38,32 @@ def get1():
         # res = requests.get(url)
         # print(res.status_code)
 
+
 def retry_get():
     from requests.exceptions import Timeout
+
     BASE_URL = "https://www.sharetechnote.com/"
-    MAX_RETRIES =3
+    MAX_RETRIES = 3
     for _ in range(MAX_RETRIES):
         try:
-            res = requests.get(BASE_URL,timeout=0.2)
+            res = requests.get(BASE_URL, timeout=0.2)
             print(res.text)
             print(res.status_code)
-            break;
-        except Timeout as t:
+            break
+        except Timeout:
             print("timeout")
     else:
         print("all retries failed")
 
-#print(config.access_token())
+
+# print(config.access_token())
 
 if __name__ == "__main__":
-#    get1()
-#caa023eb88bb07a745876f6edc94ae91cc667afe0e6505beef52a2f254ed8e87
-#https://gorest.co.in/
-#get with retries
-   # retry_get()
+    #    get1()
+    # caa023eb88bb07a745876f6edc94ae91cc667afe0e6505beef52a2f254ed8e87
+    # https://gorest.co.in/
+    # get with retries
+    # retry_get()
 
     print(config.access_token())
     print(config.get_apikey())

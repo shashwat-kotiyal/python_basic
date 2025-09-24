@@ -1,0 +1,17 @@
+[project]
+name = "python-basic"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "flask>=3.1.2",
+    "requests>=2.32.5",
+    "robotframework>=7.3.2",
+    "robotframework-seleniumlibrary>=6.7.1",
+    "selenium>=4.35.0",
+]
+
+[tools.ruff]
+lint.extend-select = ["ALL"]
+lint.ignore = ["T201"]

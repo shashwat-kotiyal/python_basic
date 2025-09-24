@@ -1,10 +1,10 @@
-
 def simple_deco():
     def deco(ori_fun):
         def inner():
             print("before running original function")
             ori_fun()
             print("After running original function")
+
         return inner
 
     @deco
@@ -17,17 +17,20 @@ def simple_deco():
 def ntimes():
     def repeat(n):
         def deco(ori_func):
-            def inner_func(*args,**kargs):
+            def inner_func(*args, **kargs):
                 for _ in range(n):
-                    ori_func(*args,*kargs)
+                    ori_func(*args, *kargs)
+
             return inner_func
+
         return deco
 
     @repeat(2)
-    def add(a,b):
-        print(a+b)
+    def add(a, b):
+        print(a + b)
 
-    add(2,3)
+    add(2, 3)
+
 
 def twice():
     def log(msg):
@@ -67,6 +70,7 @@ def timetaken():
 
     print("Sum is:", add(5, 7))
 
+
 def upper():
     @to_upper
     def greet(name):
@@ -76,16 +80,16 @@ def upper():
 
 
 if __name__ == "__main__":
-#Write a decorator that prints "Before" before the wrapped function runs and "After" after it runs.
-    #simple_deco()
+    # Write a decorator that prints "Before" before the wrapped function runs and "After" after it runs.
+    # simple_deco()
 
-#run function n times
+    # run function n times
     ntimes()
-#Create a decorator that runs the wrapped function twice whenever it is called.
+    # Create a decorator that runs the wrapped function twice whenever it is called.
     twice()
 
-#Create a decorator @time_it that measures how long a function takes to run.
+    # Create a decorator @time_it that measures how long a function takes to run.
     timetaken()
 
-#Write a decorator that converts the return value of the wrapped function to uppercase.
+    # Write a decorator that converts the return value of the wrapped function to uppercase.
     upper()

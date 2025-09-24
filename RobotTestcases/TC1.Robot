@@ -2,8 +2,19 @@
 
 Library  SeleniumLibrary
 Library  BuiltIn
+Library  Collections
+Library  String
+
+
+
 
 *** Variables ***
+${var1}    hello world
+
+@{fruits}    apple  banana  mango  orange   pear   grape
+&{person}    name=shashwat  age=25  city=indore
+${name}    shashwat
+
 
 
 *** Keywords ***
@@ -20,4 +31,13 @@ LoginTest
     # sleep  4s
     # Close Browser
     #//input[contains(@name,'User')]
+
+Datatypes
+    Log  ${var1}
+    Log Many  @{fruits}
+    Log  ${person['name']}
+    Log  ${name}
+    Log  ${person['age']}
+    Log  ${person['city']}
+    
 

@@ -1,15 +1,13 @@
-from collections import namedtuple
-from dataclasses import dataclass
 # Nodes
-    # AP, Edge, CSO-Server, CSO-App ( UI, backend rest calls), Moxn, Attenuator, OTA Machine, Amarisoft
-    # gui POM, all page one py file
+# AP, Edge, CSO-Server, CSO-App ( UI, backend rest calls), Moxn, Attenuator, OTA Machine, Amarisoft
+# gui POM, all page one py file
 
 # functionality
-    # running a remote command
-        # ssh_utiltiy
-        # kubectl command ( complexity)
-    # calling an API
-        # api_call
+# running a remote command
+# ssh_utiltiy
+# kubectl command ( complexity)
+# calling an API
+# api_call
 
 # logging
 # is should fill the execution data in a database
@@ -17,42 +15,42 @@ from dataclasses import dataclass
 # config cretation automation ( config data classes)
 
 # frlib
-    # ap.py
-    # cso.py
-    # csoapi.py ( submodule api call)
-    # csoweb.py
-    # utils
-        # ssh_utility
-        # constants AP-models, device-ids
-        # kube_utility ( command builder)
-    # config
-        # data_classes ( setup definitions as a dataclass)
-        #@dataclass
-        #class AP:
-        #    SSH_IP: str
-        #    SSH_USERNAME: str
-        #AP_CONFIG = AP(SSH_IP="123.32.12.11", SSH_USERNAME="root")
-        # exceptions
-    # general_utils
-        # helper_functions ( read a tcpdump )
-    # __init__.py
+# ap.py
+# cso.py
+# csoapi.py ( submodule api call)
+# csoweb.py
+# utils
+# ssh_utility
+# constants AP-models, device-ids
+# kube_utility ( command builder)
+# config
+# data_classes ( setup definitions as a dataclass)
+# @dataclass
+# class AP:
+#    SSH_IP: str
+#    SSH_USERNAME: str
+# AP_CONFIG = AP(SSH_IP="123.32.12.11", SSH_USERNAME="root")
+# exceptions
+# general_utils
+# helper_functions ( read a tcpdump )
+# __init__.py
 
-#ride
+# ride
 # bin
-    # scripts emailing, reports listeners
-    # not allow in develop force user to make a branch switch ( shell script), package check, requirement text-> main.py
+# scripts emailing, reports listeners
+# not allow in develop force user to make a branch switch ( shell script), package check, requirement text-> main.py
 
 # data
-    # resources
+# resources
 
 # logs
-    # per execution with tampstamps
+# per execution with tampstamps
 
 # Test-Suite
-    # robo files .robo keywords are being called
+# robo files .robo keywords are being called
 
 # cn_library
-    # custom robo libraries ( python implemented using lib ) .py implementation
+# custom robo libraries ( python implemented using lib ) .py implementation
 
 # Mysql db for execution result storage ( time, build number, pass, fail, reason, setup name)
 # groupby, charting, graphing
@@ -62,20 +60,16 @@ from dataclasses import dataclass
 # they want to know the latest passed build
 #
 
-from frlib import CSO, Edge
-from frlib.cso import privateCSO
+from frlib import CSO
+
 c = CSO()
 
 
 # performance and scaling
 # Lazy Loading
-    # when we are working with thousands APs ( loading the complete logs)
-    # file iteration ( file.read())
-    # long running ( while loop which iterate if data available on socket)
-
-
-
-
+# when we are working with thousands APs ( loading the complete logs)
+# file iteration ( file.read())
+# long running ( while loop which iterate if data available on socket)
 
 
 # SOLID principle
@@ -83,9 +77,7 @@ c = CSO()
 # single responsiblity:
 # class should have one and only one responsiblity
 
-#O: class should be open for extension close for modification.
-#L: liskov substuiton :
-#I : interface saggretion
-#D: Dependency inversion
-
-
+# O: class should be open for extension close for modification.
+# L: liskov substuiton :
+# I : interface saggretion
+# D: Dependency inversion

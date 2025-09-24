@@ -1,6 +1,7 @@
 import asyncio
 import random
 
+
 async def worker(name, succeed=True):
     delay = random.uniform(0.5, 2.0)
     await asyncio.sleep(delay)
@@ -8,6 +9,7 @@ async def worker(name, succeed=True):
         return f"{name} ✅ succeeded in {delay:.2f}s"
     else:
         raise Exception(f"{name} ❌ failed in {delay:.2f}s")
+
 
 async def main():
     tasks = [
@@ -41,5 +43,6 @@ async def main():
 
     # Clean up cancelled tasks
     await asyncio.gather(*tasks, return_exceptions=True)
+
 
 asyncio.run(main())

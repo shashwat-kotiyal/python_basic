@@ -1,5 +1,6 @@
 import asyncio
 
+
 async def worker(queue):
     while True:
         item = await queue.get()
@@ -7,6 +8,7 @@ async def worker(queue):
         await asyncio.sleep(1)
         print(f"✅ Done with {item}")
         queue.task_done()
+
 
 async def main():
     queue = asyncio.Queue()
@@ -21,5 +23,6 @@ async def main():
     print("⏳ Waiting for all tasks to be done...")
     await queue.join()  # waits for 3 task_done() calls
     print("🎉 All tasks processed.")
+
 
 asyncio.run(main())

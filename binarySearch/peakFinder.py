@@ -1,5 +1,4 @@
-#peak finder
-
+# peak finder
 
 
 """
@@ -45,34 +44,36 @@ public:
         }
         else
             return -1;
- """
+"""
 
-def peakFinderB(arr: [int])->int:
-    n= len(arr)
-    for  i in range(n):
-        if (i==0 or arr[i-1]<arr[i]) and ( i==n-1 or arr[i]>arr[i+1]):
+
+def peakFinderB(arr: [int]) -> int:
+    n = len(arr)
+    for i in range(n):
+        if (i == 0 or arr[i - 1] < arr[i]) and (i == n - 1 or arr[i] > arr[i + 1]):
             return i
     return -1
 
-def peakFinder1(arr:[int])-> int:
+
+def peakFinder1(arr: [int]) -> int:
     n = len(arr)
-    if n==1:
+    if n == 1:
         return 0
     if arr[0] > arr[1]:
         return 0
-    if arr[n-1] > arr[n-2]:
-        return n-1
-    low=1
-    high=n-2
+    if arr[n - 1] > arr[n - 2]:
+        return n - 1
+    low = 1
+    high = n - 2
 
     while low <= high:
-        mid= low + (high-low)//2
-        if arr[mid] > arr[mid-1] and arr[mid]> arr[mid+1]:
+        mid = low + (high - low) // 2
+        if arr[mid] > arr[mid - 1] and arr[mid] > arr[mid + 1]:
             return mid
-        elif arr[mid] > arr[mid -1]:
-            low= mid+1
+        elif arr[mid] > arr[mid - 1]:
+            low = mid + 1
         else:
-            high=mid-1
+            high = mid - 1
     return -1
 
 
@@ -87,12 +88,8 @@ def peakFinder1(arr:[int])-> int:
 #         if a[low]>a[mid]:
 
 
-
-
-
-
-if __name__== "__main__":
-###########################################################################
+if __name__ == "__main__":
+    ###########################################################################
     # arr = [1, 5, 8, 10, 15, 3, 4]
     # idx = peakFinderB(arr)
     # print(f"Peak found at index {idx} with value {arr[idx]}")
@@ -108,7 +105,7 @@ if __name__== "__main__":
     # arr3 = [8]
     # idx3 = peakFinderB(arr3)
     # print(f"Peak found at index {idx3} with value {arr3[idx3]}")
-##################################################################
+    ##################################################################
 
     arr = [4, 5, 6, 7, 0, 1, 2, 3]
-   # print(sortedRotatedArray(arr))
+# print(sortedRotatedArray(arr))
