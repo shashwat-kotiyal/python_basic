@@ -80,8 +80,9 @@ def upper():
 
 
 if __name__ == "__main__":
+    #decorator is function which take function as arument(original) and return function waitng for execution. 
     # Write a decorator that prints "Before" before the wrapped function runs and "After" after it runs.
-    # simple_deco()
+    simple_deco()
 
     # run function n times
     ntimes()

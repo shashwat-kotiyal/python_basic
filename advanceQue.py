@@ -226,12 +226,12 @@ With examples: (?=...), (?!...), (?<=...), (?<!...)
 Can regex be used to parse HTML or JSON? Why or why not?
 """
 if __name__ == "__main__":
-    stringMultipy()
+    #stringMultipy()
 
     # findIP()
-    # strongPasswordvalidator()
+    #strongPasswordvalidator()
     # extractFunctionName("RegexTut.py")
-    # duplicate_words()
+     duplicate_words()
     # remove_all_dups()
 
     # print(is_valid_anagram('abbc','bbac'))

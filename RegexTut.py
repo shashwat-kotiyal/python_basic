@@ -9,7 +9,7 @@ Created on Mon Jul 12 00:20:43 2021
 findall, search, spilt, sub, finditer
 meta character:
    [] . ^ $ * + {} | ()
-. any character expect \n 
+. any single character expect \n 
 + one or more
 '\d' matches digit (0 9)
 '\D' not a digit  (0 9)
