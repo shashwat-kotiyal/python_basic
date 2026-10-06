@@ -228,7 +228,7 @@ Can regex be used to parse HTML or JSON? Why or why not?
 if __name__ == "__main__":
     #stringMultipy()
 
-    # findIP()
+     findIP()
     #strongPasswordvalidator()
     # extractFunctionName("RegexTut.py")
      duplicate_words()

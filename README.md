@@ -23,6 +23,61 @@ uv run python --version
 
 > The project pins Python to 3.13 via `.python-version`. uv downloads and installs it automatically.
 
+## Running scripts
+
+There are two ways to run scripts. Both use the same `.venv` environment.
+
+### Option 1 — `uv run` (no activation needed)
+
+Run any script through uv so it uses the project venv and its dependencies:
+
+```powershell
+uv run python main.py
+uv run python array/example.py
+```
+
+You can also run a module the same way (e.g. a package under `oops/`, `algo/`):
+
+```powershell
+uv run python -m algo.some_module
+```
+
+### Option 2 — activate the venv, then run `python` directly
+
+Activate the venv in your terminal (activates automatically when you open a terminal in VS Code if `.vscode/settings.json` is set up):
+
+```powershell
+# PowerShell
+.venv\Scripts\Activate.ps1
+
+# CMD
+.venv\Scripts\activate.bat
+```
+
+Once activated, the prompt is prefixed with `(.venv)` and `python`/`pip` point to the venv, so you can run scripts directly:
+
+```powershell
+python main.py
+python array/example.py
+python -m algo.some_module
+```
+
+When done, exit the venv:
+
+```powershell
+deactivate
+```
+
+You can confirm you're using the venv with:
+
+```powershell
+where.exe python   # should show the .venv\Scripts\python.exe path
+```
+
+In VS Code, once the `.venv` interpreter is selected (see below), you can open any `.py` file and press **Run** (play button) or **F5** — it will use the venv automatically.
+
+> Tip: use the **Run Python File** play button in the top-right of the editor, or set up a `.vscode/launch.json` to run the current file.
+
 ## Daily uv commands
 
 ```powershell

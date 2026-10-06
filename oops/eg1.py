@@ -46,8 +46,8 @@ print(emp1)
 print(emp1.count)
 print(emp1.Name)
 emp2 = Employee("Shashwat", 2, 5000000)
-print(emp2._repr_())
-print(emp2._str_())  #
+print(emp2.__repr__())
+print(emp2.__str__())  #
 print(emp2)
 print(emp1.Name)
 print(emp2.Name)

@@ -62,6 +62,8 @@ print(Employee.is_valid_raise(0.4))
 
 print(f"{Employee.__dict__}")
 # emp1.__dict__ does not contain raise_amt, emp_count
+#Employee object ke andar jo instance attributes hain, wo dictionary mein mil gaye
+print(f"***** emp1.__dict__ *****")
 print(f"{emp1.__dict__}")
 
 

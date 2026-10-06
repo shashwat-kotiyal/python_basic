@@ -10,7 +10,9 @@
 
 # we can create our own object from that clases
 
-# A class is the blueprint for creating objects, it defines  attribute or data store information about object, method define  object action and behivour
+# A class is the blueprint for creating objects, 
+# it defines  attribute or data store information about object,
+#  method define  object action and behivour
 class Dog:
     def __init__(self, name, bread):  # run only when obj is intanciated
         self.name = name

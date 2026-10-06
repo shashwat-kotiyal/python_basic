@@ -45,6 +45,8 @@ print(f(5))
 # pass as argument
 
 squares = map(square, [1, 2, 3, 4, 5])
+#Jo function tumne diya hai, usko list ke har element par apply karo.
+#return itretor object
 
 print(list(squares))
 

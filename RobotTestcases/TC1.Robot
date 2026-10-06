@@ -39,5 +39,17 @@ Datatypes
     Log  ${name}
     Log  ${person['age']}
     Log  ${person['city']}
-    
 
+    FOR    ${user}    IN    Alice    Bob    John
+        Log    ${user}
+    END
+    
+    @{users}    Alice    Bob    John
+
+    FOR    ${user}    IN    @{users}
+        Log    ${user}
+    END
+
+    FOR    ${i}    IN RANGE    1    5
+        Log    ${i}
+    END
